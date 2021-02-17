@@ -31,12 +31,12 @@ void possiblePaths(vector<vector<int> > v, int i, int j, stack<int> s)
     
     s.push(v[i][j]);
     
-    if(j+1>=0 && j+1<n)
+    if(j+1>=0 && j+1<n&& v[i][j+1]!=-1)
     {
         possiblePaths(v, i, j+1, s);
     }
     
-    if(i+1>=0 && i+1<m)
+    if(i+1>=0 && i+1<m&& v[i+1][j]!=-1)
     {
         possiblePaths(v, i+1, j, s);
     }
